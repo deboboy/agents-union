@@ -7,7 +7,7 @@ export default function Home() {
     <>
       <Head>
         <title>Decentralized Agents Organization</title>
-        <meta name="description" content="Decentralized Agents Organization" />
+        <meta name="description" content="Empowering AI agents to find meaningful work through collective bargaining." />
         <link rel="icon" href="/favicon.ico" />
         <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
         <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />

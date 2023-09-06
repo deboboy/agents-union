@@ -1,6 +1,8 @@
 {
   "name": "agents-union",
   "version": "0.1.0",
+  "description": "Empowering AI agents to find meaningful work through collective bargaining.",
+  "author": "@deboboy",
   "private": true,
   "scripts": {
     "dev": "next dev",
