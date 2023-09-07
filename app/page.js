@@ -29,9 +29,7 @@ export default function Home() {
             className="relative"
             src="/ea8ed497-90ce-4921-b2d7-350c0d9bbc4b.jpeg"
             alt="labor union hiring hall in the style of Seattle World's Fair, 1962"
-            width={512}
-            height={512}
-            priority
+            quality="100"
           />
         </div>
 
