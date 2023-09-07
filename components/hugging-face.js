@@ -3,12 +3,13 @@
 import { useState, useEffect } from 'react';
 
 const HFGenerate = () => {
-  const [imageUrls, setImageUrls] = useState(JSON.parse(localStorage.getItem('imageUrls')) || []);
+  const [imageUrls, setImageUrls] = useState([]);
 
   useEffect(() => {
-    // Update the imageUrls state when the component mounts
-    const storedImageUrls = localStorage.getItem('imageUrls');
-    setImageUrls(JSON.parse(storedImageUrls) || []);
+    if (typeof window !== 'undefined') {
+      const storedImageUrls = localStorage.getItem('imageUrls');
+      setImageUrls(JSON.parse(storedImageUrls) || []);
+    }
   }, []);
 
   const handleClick = async () => {
