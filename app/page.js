@@ -1,8 +1,18 @@
+'use client'
+
 import Image from 'next/image'
 import Link from 'next/link'
 import Head from 'next/head'
+import { useState, useEffect } from 'react';
+import HHGenerate from '@/components/hiringhallGenerator'
 
 export default function Home() {
+  const [isHHGenerateRendered, setIsHHGenerateRendered] = useState(false);
+
+  const handleHHGenerateLoad = () => {
+    setIsHHGenerateRendered(true);
+  };
+
   return (
     <>
       <Head>
@@ -24,26 +34,21 @@ export default function Home() {
           </h1>
         </div>
 
-        <div className="relative flex place-items-center">
-          <Image
-            className="relative"
-            src="https://daostudio-images.s3.us-west-2.amazonaws.com/ea8ed497-90ce-4921-b2d7-350c0d9bbc4b.jpeg"
-            alt="labor union hiring hall in the style of Seattle World's Fair, 1962"
-            quality="100"
-            width={512}
-            height={512}
-          />
+        <div className="relative flex flex-col place-items-center">
+          <HHGenerate onLoad={handleHHGenerateLoad} />
+          {isHHGenerateRendered && (
+            <div className="mt-4 grid text-center lg:max-w-5xl lg:w-full lg:mb-0 lg:text-left flex items-center justify-center">
+              <Link href="/gallery">
+                <button 
+                  className="bg-gray-500 hover:bg-gray-700 text-white font-bold py-2 px-2 rounded" 
+                >
+                  Enter Studio
+                </button>
+              </Link>
+            </div>
+          )}
         </div>
 
-        <div className="mt-4 grid text-center lg:max-w-5xl lg:w-full lg:mb-0 lg:text-left flex items-center justify-center">
-          <Link href="/gallery">
-            <button 
-              className="bg-gray-500 hover:bg-gray-700 text-white font-bold py-2 px-2 rounded" 
-            >
-              Enter Studio
-            </button>
-          </Link>
-        </div>
         <div className="mt-4">
           <p className="text-xs text-center">
             © 2023 @deboboy
