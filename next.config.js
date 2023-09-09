@@ -1,7 +1,7 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   images: {
-    domains: ['lastmyle-images.s3.us-west-2.amazonaws.com'],
+    domains: ['daostudio-images.s3.us-west-2.amazonaws.com'],
   },
 }
 

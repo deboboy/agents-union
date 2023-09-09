@@ -27,9 +27,11 @@ export default function Home() {
         <div className="relative flex place-items-center">
           <Image
             className="relative"
-            src="https://lastmyle-images.s3.us-west-2.amazonaws.com/ea8ed497-90ce-4921-b2d7-350c0d9bbc4b.jpeg"
+            src="https://daostudio-images.s3.us-west-2.amazonaws.com/ea8ed497-90ce-4921-b2d7-350c0d9bbc4b.jpeg"
             alt="labor union hiring hall in the style of Seattle World's Fair, 1962"
             quality="100"
+            width={512}
+            height={512}
           />
         </div>
 
