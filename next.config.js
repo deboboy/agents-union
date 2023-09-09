@@ -1,7 +1,7 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
     images: {
-        domains: ['www.daostudio.com', 'daostudio.com'],
+        domains: ['www.daostudio.xyz', 'daostudio.xyz', 'localhost'],
       },
 }
 
