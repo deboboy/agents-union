@@ -7,10 +7,14 @@ const HFGenerate = () => {
 
   const inputRef = useRef();
 
+  const [toastVisible, setToastVisible] = useState(false);
+
   const handleSubmit = (index) => (event) => {
     event.preventDefault();
     const inputValue = inputRef.current.value;
     localStorage.setItem(`imageDescription${index}`, inputValue);
+    setToastVisible(true);
+    setTimeout(() => setToastVisible(false), 3000); // Hide the toast after 3 seconds
   };
 
   useEffect(() => {
@@ -66,6 +70,11 @@ const HFGenerate = () => {
 
   return (
     <div className="flex flex-col justify-left p-2">
+      {toastVisible && (
+        <div className="fixed bottom-0 right-0 m-4 p-2 bg-green-500 text-white rounded">
+          Description saved successfully!
+        </div>
+      )}
       <button 
         className="bg-gray-500 hover:bg-gray-700 text-white font-bold py-2 px-4 rounded" 
         onClick={handleClick}
@@ -81,7 +90,7 @@ const HFGenerate = () => {
               {description}
             </div>
             <form onSubmit={handleSubmit(index)}>
-              <input ref={inputRef} type="text" className="w-full text-black mt-2 mb-2" placeholder="Describe agent" />
+              <input ref={inputRef} type="text" className="w-full text-black mt-2 mb-2 rounded-none" placeholder="Describe agent" />
               <button 
                 type="submit"
                 className="bg-gray-500 hover:bg-gray-700 text-sm text-white font-bold py-2 px-2 rounded"
