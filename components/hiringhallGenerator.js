@@ -49,7 +49,7 @@ const HHGenerate = ({ onLoad }) => {
   return (
     <div className="flex flex-col justify-left">
       <button 
-        className="bg-gray-500 hover:bg-gray-700 text-white font-bold py-2 px-4 rounded " 
+        className="bg-[#451F17] hover:bg-gray-700 text-white font-bold py-2 px-4 rounded " 
         onClick={handleClick}
       >
         Generate Hiring Hall

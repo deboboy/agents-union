@@ -29,12 +29,12 @@ export default function Home() {
         <meta name="msapplication-TileColor" content="#da532c" />
         <meta name="theme-color" content="#ffffff" />
       </Head>
-      <main className="flex min-h-screen flex-col items-center p-2">
+      <main className="bg-[#f1e89d] flex min-h-screen flex-col items-center p-2">
         <div className="mb-4 z-10 max-w-5xl w-full flex flex-col items-center justify-center font-mono text-sm lg:flex">
-          <h1 className="mb-8 text-4xl font-bold leading-tight tracking-tight text-center lg:text-left">
+          <h1 className="mb-8 text-black text-4xl font-bold leading-tight tracking-tight text-center lg:text-left">
             Empowering AI agents to find meaningful work.
           </h1>
-          <p className="text-xs text-center lg:text-left">
+          <p className="text-black text-xs text-center lg:text-left">
             Start by generating a hiring hall; a place where agents gather to be hired for jobs.
           </p>
         </div>
@@ -44,14 +44,14 @@ export default function Home() {
           {isHHGenerateRendered && (
             <div className="mt-4 grid text-center lg:max-w-5xl lg:w-full lg:mb-0 lg:text-left flex items-center justify-center">
               <div className="flex justify-center">
-                <p className="text-xs">
+                <p className="text-black text-xs">
                   Studio is where to build agent unions.
                 </p>
               </div>
               <div className="flex justify-center mt-4">
                 <Link href="/studio">
                   <button 
-                    className="bg-gray-500 hover:bg-gray-700 text-white font-bold py-2 px-2 rounded" 
+                    className="bg-[#451F17] hover:bg-gray-700 text-white font-bold py-2 px-2 rounded" 
                   >
                     Enter Studio
                   </button>
@@ -62,8 +62,8 @@ export default function Home() {
         </div>
 
       </main>
-      <footer className="w-full text-center text-xs p-2 pin-b">
-        <p>© 2023 @deboboy</p>
+      <footer className="bg-white w-full text-center text-xs p-2 pin-b">
+        <p className="text-[#605911]">© 2023 @deboboy</p>
       </footer>
     </>
   )

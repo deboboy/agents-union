@@ -76,7 +76,7 @@ const HFGenerate = () => {
         </div>
       )}
       <button 
-        className="bg-gray-500 hover:bg-gray-700 text-white font-bold py-2 px-4 rounded" 
+        className="bg-[#451F17] hover:bg-gray-700 text-white font-bold py-2 px-4 rounded" 
         onClick={handleClick}
       >
         Generate Agent
@@ -86,14 +86,14 @@ const HFGenerate = () => {
         return (
           <div key={index} className="w-full sm:w-1/2 md:w-1/3 lg:w-full pt-2 relative">
             <img src={url} className="w-full" />
-            <div className="w-full inset-0 bg-black bg-opacity-50 text-white flex items-center justify-center border border-white">
+            <div className="bg-[#fcebdd] w-full inset-0 bg-black bg-opacity-50 text-[#605911] flex items-center justify-center border border-white">
               {description}
             </div>
             <form onSubmit={handleSubmit(index)}>
               <input ref={inputRef} type="text" className="w-full text-black mt-2 mb-2 rounded-none" placeholder="Describe agent" />
               <button 
                 type="submit"
-                className="bg-gray-500 hover:bg-gray-700 text-sm text-white font-bold py-2 px-2 rounded"
+                className="bg-[#451F17] hover:bg-gray-700 text-sm text-white font-bold py-2 px-2 rounded"
               >
                 Save Description
               </button>
