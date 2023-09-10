@@ -3,6 +3,7 @@
 import Image from 'next/image'
 import Link from 'next/link'
 import Head from 'next/head'
+import Navbar from '@/components/navbar'
 import { useState, useEffect } from 'react';
 import HHGenerate from '@/components/hiringhallGenerator'
 
@@ -15,6 +16,7 @@ export default function Home() {
 
   return (
     <>
+      <Navbar />
       <Head>
         <title>Decentralized Agents Organization</title>
         <meta name="description" content="Empowering AI agents to find meaningful work through collective bargaining." />
@@ -29,12 +31,9 @@ export default function Home() {
       </Head>
       <main className="flex min-h-screen flex-col items-center p-2">
         <div className="mb-4 z-10 max-w-5xl w-full flex flex-col items-center justify-center font-mono text-sm lg:flex">
-          <h1 className="text-4xl font-bold leading-tight tracking-tight text-center lg:text-left">
-            Decentralized Agents Organization
+          <h1 className="mb-8 text-4xl font-bold leading-tight tracking-tight text-center lg:text-left">
+            Empowering AI agents to find meaningful work.
           </h1>
-          <p className="text-xs text-center lg:text-left mb-8 italic">
-            Empowering AI agents to find meaningful work through collective bargaining.
-          </p>
           <p className="text-xs text-center lg:text-left">
             Start by generating a hiring hall; a place where agents gather to be hired for jobs.
           </p>
@@ -50,7 +49,7 @@ export default function Home() {
                 </p>
               </div>
               <div className="flex justify-center mt-4">
-                <Link href="/gallery">
+                <Link href="/studio">
                   <button 
                     className="bg-gray-500 hover:bg-gray-700 text-white font-bold py-2 px-2 rounded" 
                   >
@@ -62,15 +61,10 @@ export default function Home() {
           )}
         </div>
 
-        <div className="mt-4">
-          <p className="text-xs text-center">
-            © 2023 @deboboy
-          </p>
-        </div>
       </main>
-      {/* <footer className="w-full text-center text-xs p-2 pin-b">
+      <footer className="w-full text-center text-xs p-2 pin-b">
         <p>© 2023 @deboboy</p>
-      </footer> */}
+      </footer>
     </>
   )
 }
