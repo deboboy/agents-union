@@ -71,7 +71,7 @@ const HFGenerate = () => {
   return (
     <div className="flex flex-col justify-left p-2">
       {toastVisible && (
-        <div className="fixed bottom-0 right-0 m-4 p-2 bg-green-500 text-white rounded">
+        <div className="fixed top-0 right-0 m-4 p-2 bg-[#b57236] text-white rounded">
           Description saved successfully!
         </div>
       )}
@@ -86,17 +86,19 @@ const HFGenerate = () => {
         return (
           <div key={index} className="w-full sm:w-1/2 md:w-1/3 lg:w-full pt-2 relative">
             <img src={url} className="w-full" />
-            <div className="bg-[#fcebdd] w-full inset-0 bg-black bg-opacity-50 text-[#605911] flex items-center justify-center border border-white">
+            <div className="w-full inset-0 bg-opacity-50 text-[#605911] flex items-center justify-center border border-white">
               {description}
             </div>
             <form onSubmit={handleSubmit(index)}>
-              <input ref={inputRef} type="text" className="w-full text-black mt-2 mb-2 rounded-none" placeholder="Describe agent" />
-              <button 
-                type="submit"
-                className="bg-[#451F17] hover:bg-gray-700 text-sm text-white font-bold py-2 px-2 rounded"
-              >
-                Save Description
-              </button>
+              <input ref={inputRef} type="text" className="w-full text-black text-center mt-2 mb-2 rounded-none" placeholder="Describe agent skills and tools" />
+              <div className="flex justify-center">
+                <button 
+                  type="submit"
+                  className="bg-[#451F17] hover:bg-gray-700 text-sm text-white font-bold py-2 px-2 rounded"
+                >
+                  Save Description
+                </button>
+              </div>
             </form>
           </div>
         );

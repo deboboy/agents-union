@@ -24,30 +24,18 @@ export default function Navbar() {
             </button>
           </div>
           <div className="flex-1 flex items-center justify-center sm:items-stretch sm:justify-start">
-            <div className="flex-shrink-0 flex items-center">
+            <div className="flex-shrink-0 flex items-center justify-center w-full">
               <Link 
                     href="/"
                     className="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
                 >
-              <img className="block lg:hidden h-8 w-auto" src="/apple-touch-icon.png" alt="Decentralized Agents Organization" />
-              <img className="hidden lg:block h-8 w-auto" src="/apple-touch-icon.png" alt="Decentralized Agents Organization" />
+                <img className="block lg:hidden h-8 w-auto" src="/apple-touch-icon.png" alt="Decentralized Agents Organization" />
+                <img className="hidden lg:block h-8 w-auto" src="/apple-touch-icon.png" alt="Decentralized Agents Organization" />
               </Link>
-            </div>
-            <div className="hidden sm:block sm:ml-6 flex">
-              <div className="flex space-x-4">
-                <Link 
-                    href="/"
-                    className="text-[#605911] hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-xl"
-                >
-                    Decentralized Agents Organization
-                </Link>
-                {/* More navigation items here */}
-              </div>
             </div>
           </div>
         </div>
       </div>
-
       <div className={`${isOpen ? 'block' : 'hidden'} sm:hidden`}>
         <div className="px-2 pt-2 pb-3 space-y-1">
           <Link 
@@ -55,6 +43,12 @@ export default function Navbar() {
             className="text-[#451F17] hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium"   
           >
             About
+          </Link>
+          <Link 
+            href="/studio"
+            className="text-[#451F17] hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium"   
+          >
+            Studio
           </Link>
           {/* More navigation items here */}
         </div>
