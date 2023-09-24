@@ -11,7 +11,7 @@ export default function Navbar() {
           <div className="absolute inset-y-0 left-0 flex items-center sm:hidden">
             <button
               onClick={() => setIsOpen(!isOpen)}
-              className="bg-white inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-white hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white"
+              className="bg-white inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-white hover:bg-[#451F17] focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white"
               aria-expanded="false"
             >
               <span className="sr-only">Open main menu</span>
@@ -27,10 +27,11 @@ export default function Navbar() {
             <div className="flex-shrink-0 flex items-center justify-center w-full">
               <Link 
                     href="/"
-                    className="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
+                    className="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium text-center"
                 >
-                <img className="block lg:hidden h-8 w-auto" src="/apple-touch-icon.png" alt="Decentralized Agents Organization" />
-                <img className="hidden lg:block h-8 w-auto" src="/apple-touch-icon.png" alt="Decentralized Agents Organization" />
+                <img className="block lg:hidden h-8 w-auto" src="/DAO_logo.png" alt="Decentralized Agents Organization" />
+                <img className="hidden lg:block h-8 w-auto" src="/DAO_logo.png" alt="Decentralized Agents Organization" />
+                {/* Decentralized Agents Organization */}
               </Link>
             </div>
           </div>
@@ -43,12 +44,6 @@ export default function Navbar() {
             className="text-[#451F17] hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium"   
           >
             About
-          </Link>
-          <Link 
-            href="/studio"
-            className="text-[#451F17] hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium"   
-          >
-            Studio
           </Link>
           {/* More navigation items here */}
         </div>

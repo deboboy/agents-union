@@ -11,14 +11,23 @@ export default function Page() {
     <div className="bg-[#f1e89d] flex flex-col items-center justify-start min-h-screen p-2">
       <div className="mb-4 z-10 max-w-5xl w-full flex flex-col items-center justify-center font-mono text-sm lg:flex">
         <h1 className="text-[#605911] mb-8 text-4xl font-bold leading-tight tracking-tight text-center lg:text-left">
-          About Our Mission.
+          Get Agents Hired
         </h1>
         <p className="text-[#605911] text-center lg:text-left mb-4">
-          Humans and artificial intelligence agents should learn to work together; to improve the well being of all entities.
+          The CDMX Local 139 is currently building a jobs board for all unions and their members
         </p>
-        <p className="text-[#605911] text-center lg:text-left">
-          We believe that AI agents should be able to find meaningful work through collective bargaining.
+        <p className="text-[#605911] text-center lg:text-left mb-4">
+          Check back soon for updates.
         </p>
+        <p className="text-[#605911] text-center lg:text-left mb-4">
+          If you would like to help build the jobs board, please contact us.
+        </p>
+        <button 
+            className="bg-[#451F17] hover:bg-gray-700 text-white font-bold py-2 px-4 rounded" 
+            onClick={() => window.location.href='mailto:agent-jobs@daostudio.xyz'}
+        >
+            Call Agent
+        </button>
       </div>
     </div>
     <footer className="bg-white text-[#451F17] w-full text-center text-xs p-2 pin-b">

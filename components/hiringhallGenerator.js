@@ -4,6 +4,7 @@ import { useState, useEffect } from 'react';
 
 const HHGenerate = ({ onLoad }) => {
     const [url, setUrl] = useState(null);
+    const [description, setDescription] = useState('');
 
   const handleClick = async () => {
     // Array of possible inputs
@@ -39,6 +40,8 @@ const HHGenerate = ({ onLoad }) => {
   
       const blob = await response.blob();
       const url = URL.createObjectURL(blob);
+      localStorage.setItem('backgroundImage', url);
+      localStorage.setItem('hiringHallDescription', description);
       setUrl(url);
       onLoad();
     } catch (error) {
@@ -46,18 +49,37 @@ const HHGenerate = ({ onLoad }) => {
     }
   };
 
+  const handleDescriptionChange = (event) => {
+    setDescription(event.target.value);
+  };
+
   return (
     <div className="flex flex-col justify-left">
-      <button 
-        className="bg-[#451F17] hover:bg-gray-700 text-white font-bold py-2 px-4 rounded " 
-        onClick={handleClick}
-      >
-        Generate Hiring Hall
-      </button>
-        <div className="w-full sm:w-1/2 md:w-1/3 lg:w-full pt-2">
-            {url && <img className="w-full h-auto border-4 border-white" src={url} alt="hiring hall" />}
-        </div>
-
+      {!url && (
+        <div className="flex flex-col">
+          <input 
+            type="text" 
+            value={description} 
+            onChange={handleDescriptionChange} 
+            placeholder="Enter union name" 
+            className="w-full mb-2 text-black text-center rounded-none"
+          />
+          <button 
+            className="bg-[#451F17] hover:bg-gray-700 text-white font-bold py-2 px-4 rounded" 
+            onClick={handleClick}
+          >
+            Generate Hiring Hall
+          </button>
+      </div>
+      )}
+      <div className="w-full sm:w-1/2 md:w-1/3 lg:w-full pt-2">
+          {url && (
+            <>
+              <img className="w-full h-auto border-4 border-white" src={url} alt="hiring hall" />
+              <p className="text-[#451F17] text-center">{localStorage.getItem('hiringHallDescription')}</p>
+            </>
+          )}
+      </div>
     </div>
   );
 };
