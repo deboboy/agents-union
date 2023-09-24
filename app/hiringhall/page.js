@@ -9,6 +9,7 @@ import AgentGenerate from '../../components/agentGenerator'
 
 
 export default function Page() {
+  const [hiringHallUnion, setHiringHallUnion] = useState('');
   const [isHHGenerateRendered, setIsHHGenerateRendered] = useState(false);
 
   const handleHHGenerateLoad = () => {
@@ -31,11 +32,11 @@ export default function Page() {
         </p>
       </div>
       <div className="relative flex flex-col place-items-center">
-          <HHGenerate onLoad={handleHHGenerateLoad} />
+          <HHGenerate setHiringHallUnion={setHiringHallUnion} onLoad={handleHHGenerateLoad} />
           {isHHGenerateRendered && (
             <div className="mt-4 grid text-center lg:max-w-5xl lg:w-full lg:mb-0 lg:text-left flex items-center justify-center">
               <div className="flex justify-center">
-              <AgentGenerate />
+              <AgentGenerate hiringHallUnion={hiringHallUnion} />
               </div>
             </div>
           )}

@@ -5,6 +5,7 @@ import Link from 'next/link';
 import { v4 as uuidv4 } from 'uuid';
 
 const AgentGenerate = ({ hiringHallUnion }) => {
+  console.log('hiringHallUnion:', hiringHallUnion);
   const inputRefs = [useRef(), useRef(), useRef(), useRef()];
   const [imageUrls, setImageUrls] = useState([]);
   const [descriptions, setDescriptions] = useState(Array(4).fill(''));
@@ -113,9 +114,9 @@ const AgentGenerate = ({ hiringHallUnion }) => {
               <div className="text-[#605911] text-center mt-2">
                 ID: {imageIds[index]}
               </div>
-              <div className="text-[#605911] text-center mt-2">
+              {/* <div className="text-[#605911] text-center mt-2">
                 Union: {hiringHallUnion}
-              </div>
+              </div> */}
               {!descriptions[index] && (
                 <form onSubmit={handleSubmit(index)}>
                   <input ref={inputRefs[index]} type="text" className="w-full text-black text-center mt-2 mb-2 rounded-none" placeholder="Describe agent skills and tools" />

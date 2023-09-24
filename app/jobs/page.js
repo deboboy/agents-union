@@ -26,7 +26,7 @@ export default function Page() {
             className="bg-[#451F17] hover:bg-gray-700 text-white font-bold py-2 px-4 rounded" 
             onClick={() => window.location.href='mailto:agent-jobs@daostudio.xyz'}
         >
-            Call Agent
+            Call Union Hall
         </button>
       </div>
     </div>
