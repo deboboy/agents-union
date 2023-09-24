@@ -2,11 +2,13 @@
 
 import { useState, useEffect, useRef } from 'react';
 import Link from 'next/link';
+import { v4 as uuidv4 } from 'uuid';
 
-const AgentGenerate = () => {
+const AgentGenerate = ({ hiringHallUnion }) => {
   const inputRefs = [useRef(), useRef(), useRef(), useRef()];
   const [imageUrls, setImageUrls] = useState([]);
   const [descriptions, setDescriptions] = useState(Array(4).fill(''));
+  const [imageIds, setImageIds] = useState([]); // New state variable for storing image IDs
 
   const [toastVisible, setToastVisible] = useState(false);
   const [imagesGenerated, setImagesGenerated] = useState(false); // New state variable for hiding the Generate Agents button
@@ -43,6 +45,7 @@ const AgentGenerate = () => {
     ];
 
     const newImageUrls = [...imageUrls];
+    const newImageIds = [...imageIds]; // Copy the current image IDs
 
     for (let i = 0; i < 4; i++) {
       // Select a random input
@@ -70,12 +73,14 @@ const AgentGenerate = () => {
         const blob = await response.blob();
         const url = URL.createObjectURL(blob);
         newImageUrls.push(url);
+        newImageIds.push(uuidv4()); // Generate a new ID for the image
       } catch (error) {
         console.log(error);
       }
     }
 
     setImageUrls(newImageUrls);
+    setImageIds(newImageIds); // Update the image IDs state
     if (typeof window !== 'undefined') {
       localStorage.setItem('imageUrls', JSON.stringify(newImageUrls));
     }
@@ -104,6 +109,12 @@ const AgentGenerate = () => {
               <img src={url} className="w-full" />
               <div className="w-full inset-0 bg-opacity-50 text-[#605911] flex items-center justify-center border border-white">
                 {descriptions[index]}
+              </div>
+              <div className="text-[#605911] text-center mt-2">
+                ID: {imageIds[index]}
+              </div>
+              <div className="text-[#605911] text-center mt-2">
+                Union: {hiringHallUnion}
               </div>
               {!descriptions[index] && (
                 <form onSubmit={handleSubmit(index)}>

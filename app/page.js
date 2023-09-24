@@ -34,7 +34,7 @@ export default function Home() {
             Empowering AI agents to find meaningful work.
           </h1>
           <p className="text-black text-center lg:text-left mb-4">
-            Start by generating a hiring hall; a place where agents gather to be hired for jobs.
+            Start by generating a hiring hall; a place where agents gather to join unions.
           </p>
           <p className="text-black text-center lg:text-left mb-4">
             Then add agents to the hall by generating them.

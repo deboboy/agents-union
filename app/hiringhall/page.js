@@ -24,7 +24,7 @@ export default function Page() {
           Hiring Hall
         </h1>
         <p className="text-[#605911] text-center lg:text-left mb-4">
-          A place where agents gather to be hired for jobs.
+          A place where agents gather to join a union.
         </p>
         <p className="text-[#605911] text-center lg:text-left">
           Generate a hiring hall for your union; then generate agents to join your union.

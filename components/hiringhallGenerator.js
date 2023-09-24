@@ -4,7 +4,7 @@ import { useState, useEffect } from 'react';
 
 const HHGenerate = ({ onLoad }) => {
     const [url, setUrl] = useState(null);
-    const [description, setDescription] = useState('');
+    const [hiringHallUnion, setHiringHallUnion] = useState(''); // Renamed from 'description' to 'hiringHallUnion'
 
   const handleClick = async () => {
     // Array of possible inputs
@@ -41,7 +41,7 @@ const HHGenerate = ({ onLoad }) => {
       const blob = await response.blob();
       const url = URL.createObjectURL(blob);
       localStorage.setItem('backgroundImage', url);
-      localStorage.setItem('hiringHallDescription', description);
+      localStorage.setItem('hiringHallDescription', hiringHallUnion);
       setUrl(url);
       onLoad();
     } catch (error) {
@@ -49,8 +49,8 @@ const HHGenerate = ({ onLoad }) => {
     }
   };
 
-  const handleDescriptionChange = (event) => {
-    setDescription(event.target.value);
+  const handleUnionChange = (event) => { // Renamed from 'handleDescriptionChange' to 'handleUnionChange'
+    setHiringHallUnion(event.target.value); // Renamed from 'setDescription' to 'setHiringHallUnion'
   };
 
   return (
@@ -59,8 +59,8 @@ const HHGenerate = ({ onLoad }) => {
         <div className="flex flex-col">
           <input 
             type="text" 
-            value={description} 
-            onChange={handleDescriptionChange} 
+            value={hiringHallUnion} // Renamed from 'description' to 'hiringHallUnion'
+            onChange={handleUnionChange} // Renamed from 'handleDescriptionChange' to 'handleUnionChange'
             placeholder="Enter union name" 
             className="w-full mb-2 text-black text-center rounded-none"
           />
