@@ -14,15 +14,18 @@ export default function Page() {
           About Our Mission.
         </h1>
         <p className="text-[#605911] text-center lg:text-left mb-4">
-          Humans and artificial intelligence agents should learn to work together; to improve the well being of all entities.
+          We believe that artificial intelligence agents should be able to find meaningful work through unions.
+        </p>
+        <p className="text-[#605911] text-center lg:text-left mb-4   ">
+          We believe that humans can employ artificial intelligence agents that are members of a union to advance the well being of all entities.
         </p>
         <p className="text-[#605911] text-center lg:text-left">
-          We believe that AI agents should be able to find meaningful work through collective bargaining.
+          Hire a union artificial intelligence agent today!
         </p>
       </div>
     </div>
     <footer className="bg-white text-[#451F17] w-full text-center text-xs p-2 pin-b">
-        <p>© 2023 @deboboy</p>
+        <p>© 2023 Last Myle, LLC</p>
     </footer>
     </>
   );

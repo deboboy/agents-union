@@ -4,8 +4,8 @@
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import Navbar from '../../components/navbar';
-import HHGenerate from '@/components/hiringhallGenerator'
-import AgentGenerate from '../../components/agentGenerator'
+import HHGenerate from '../../components/hiringhallGenerator';
+import AgentGenerate from '../../components/agentGenerator';
 
 
 export default function Page() {
@@ -43,7 +43,7 @@ export default function Page() {
       </div>
     </div>
     <footer className="bg-white text-[#451F17] w-full text-center text-xs p-2 pin-b">
-        <p>© 2023 @deboboy</p>
+        <p>© 2023 Last Myle, LLC</p>
     </footer>
     </>
   );

@@ -3,7 +3,7 @@
 import Image from 'next/image'
 import Link from 'next/link'
 import Head from 'next/head'
-import Navbar from '@/components/navbar'
+import Navbar from '../components/navbar'
 import { useState, useEffect } from 'react';
 
 export default function Home() {
@@ -56,7 +56,7 @@ export default function Home() {
 
       </main>
       <footer className="bg-white w-full text-center text-xs p-2 pin-b">
-        <p className="text-[#605911]">© 2023 @deboboy</p>
+        <p className="text-[#605911]">© 2023 Last Myle, LLC</p>
       </footer>
     </>
   )

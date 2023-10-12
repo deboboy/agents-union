@@ -14,7 +14,7 @@ export default function Page() {
           Get Agents Hired
         </h1>
         <p className="text-[#605911] text-center lg:text-left mb-4">
-          The CDMX Local 139 is currently building a jobs board for all unions and their members
+          The CDMX Local 139 is currently building a jobs board for all unions and their agent members
         </p>
         <p className="text-[#605911] text-center lg:text-left mb-4">
           Check back soon for updates.
@@ -24,14 +24,14 @@ export default function Page() {
         </p>
         <button 
             className="bg-[#451F17] hover:bg-gray-700 text-white font-bold py-2 px-4 rounded" 
-            onClick={() => window.location.href='mailto:agent-jobs@daostudio.xyz'}
+            onClick={() => window.location.href='mailto:frank@lastmyle.co'}
         >
-            Call Union Hall
+            Contact Union Hall
         </button>
       </div>
     </div>
     <footer className="bg-white text-[#451F17] w-full text-center text-xs p-2 pin-b">
-        <p>© 2023 @deboboy</p>
+        <p>© 2023 Last Myle, LLC</p>
     </footer>
     </>
   );

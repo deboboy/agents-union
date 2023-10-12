@@ -2,11 +2,15 @@
 
 import { useState, useEffect } from 'react';
 
+
 const HHGenerate = ({ onLoad }) => {
     const [url, setUrl] = useState(null);
     const [hiringHallUnion, setHiringHallUnion] = useState(''); // Renamed from 'description' to 'hiringHallUnion'
+    const [isLoading, setIsLoading] = useState(false);
 
   const handleClick = async () => {
+    setIsLoading(true);
+
     // Array of possible inputs
     const inputsArray = [
       "flat vector illustration, png white background, clean, minimalistic:1.5,scene from a labor union hall, in the style of animated illustrations, studyplace, text-based",
@@ -40,6 +44,7 @@ const HHGenerate = ({ onLoad }) => {
   
       const blob = await response.blob();
       const url = URL.createObjectURL(blob);
+
       localStorage.setItem('backgroundImage', url);
       localStorage.setItem('hiringHallDescription', hiringHallUnion);
       setUrl(url);
@@ -68,7 +73,7 @@ const HHGenerate = ({ onLoad }) => {
             className="bg-[#451F17] hover:bg-gray-700 text-white font-bold py-2 px-4 rounded" 
             onClick={handleClick}
           >
-            Generate Hiring Hall
+            {isLoading ? 'Generating...' : 'Generate Hiring Hall'}
           </button>
       </div>
       )}
