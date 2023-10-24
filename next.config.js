@@ -5,4 +5,12 @@ const nextConfig = {
   },
 }
 
-module.exports = nextConfig
+module.exports =  { 
+  nextConfig,
+  resolve: {
+    fallback: {
+      "encoding": require.resolve("encoding")
+    }
+  }  
+
+}
