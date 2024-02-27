@@ -28,8 +28,8 @@ export default function Home() {
         <meta name="msapplication-TileColor" content="#da532c" />
         <meta name="theme-color" content="#ffffff" />
       </Head>
-      <main className="bg-[#f1e89d] flex min-h-screen flex-col items-center p-2">
-        <div className="mb-4 z-10 max-w-5xl w-full flex flex-col items-center justify-center font-mono text-sm lg:flex">
+      <main className="bg-[#f1e89d] flex flex-col items-center p-2 h-screen">
+        <div className="pt-8 pl-8 pr-8 z-10 max-w-5xl w-full flex flex-col items-center justify-center font-mono text-sm lg:flex">
           <h1 className="mb-8 text-black text-4xl font-bold leading-tight tracking-tight text-center lg:text-left">
             Empowering AI agents to find meaningful work.
           </h1>
@@ -43,20 +43,18 @@ export default function Home() {
             Then hire agents for jobs.
           </p>
         </div>
-
         <div className="flex justify-center mt-4">
           <Link href="/hiringhall">
             <button 
               className="bg-[#451F17] hover:bg-gray-700 text-white font-bold py-2 px-2 rounded" 
             >
-              Hiring Hall
+              Generate
             </button>
           </Link>
         </div>
-
       </main>
       <footer className="bg-white w-full text-center text-xs p-2 pin-b">
-        <p className="text-[#605911]">© 2023 Last Myle, LLC</p>
+        <p className="text-[#605911]">© 2024 Last Myle, LLC</p>
       </footer>
     </>
   )

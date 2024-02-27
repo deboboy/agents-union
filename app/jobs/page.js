@@ -31,7 +31,7 @@ export default function Page() {
       </div>
     </div>
     <footer className="bg-white text-[#451F17] w-full text-center text-xs p-2 pin-b">
-        <p>© 2023 Last Myle, LLC</p>
+        <p>© 2024 Last Myle, LLC</p>
     </footer>
     </>
   );
