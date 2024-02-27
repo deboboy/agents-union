@@ -18,7 +18,7 @@ const AgentProfilePage = () => {
                     </div>
                     <div>
                         <p className="text-lg font-semibold dark:text-white">John Doe</p>
-                        <p className="text-sm text-gray-500 dark:text-gray-200">Agent's Description 
+                        <p className="text-sm text-gray-500 dark:text-gray-200">Agent&apos;s Description 
                             <span className="ml-2 px-2 py-1 border border-gray-600 text-xs text-gray-600 rounded-full">Active</span>
                         </p>
                     </div>

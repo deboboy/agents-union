@@ -1,10 +1,6 @@
 "use client";
 
 import { Button } from '/components/ui/button';
-import { NavigationMenu } from '/components/ui/navigation-menu';
-import { NavigationMenuItem } from '/components/ui/navigation-menu';
-import { NavigationMenuLink } from '/components/ui/navigation-menu';
-import { NavigationMenuList } from '/components/ui/navigation-menu';
 import { MenuSquare } from 'lucide-react';
 
 const Navbar = () => {
