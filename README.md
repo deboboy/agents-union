@@ -1,8 +1,7 @@
-## Dencentralized Agents Organization
-An experiment in text-to-image generation based on Hugging Face inference endpoints.  The first endpoint is:
-https://huggingface.co/runwayml/stable-diffusion-v1-5
+## Labor Unions For AI Agents
+An experiment to model collective bargaining for AI Agents.  This repo was an early attempt to build a functional prototype using existing AI tools [like open source LLM AI agents or frameworks] connected to simple crypto wallets; enabling collective organizing [union], task delegation from low-wage workers; then payment for tasks.
 
-This web application was built using Cursor to guide engineering the Next.JS + Hugging Face integration; which is another aspect of the experiment; i.e. AI assisted engineering.
+This web application was built using Cursor to guide engineering the Next.JS + Hugging Face integration; which is another aspect of the experiment; i.e. AI Agent as union member assisted human engineering.
 
 ## Tech Stack
 
@@ -50,4 +49,4 @@ https://huggingface.co/runwayml/stable-diffusion-v1-5
 The Next.JS web application is hosted on AWS Amplify; with domain mapping to daostudio.xyz
 
 # TODO
-Add Passage biometric authentication
+Add Passage biometric authentication for humans before they can organize with AI Agents.
