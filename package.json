@@ -4,6 +4,9 @@
   "description": "Empowering AI agents to find meaningful work through collective bargaining.",
   "author": "@deboboy",
   "private": true,
+  "engines": {
+    "node": ">=20.x"
+  },
   "scripts": {
     "dev": "next dev",
     "build": "next build",
