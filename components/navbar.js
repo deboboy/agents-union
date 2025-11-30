@@ -13,8 +13,20 @@ const Navbar = () => {
               <a href="/">AGENTS UNION</a>
             </div>
           </div>
-          <div className="block lg:hidden">
-          </div>
+          <nav className="flex items-center gap-4">
+            <a
+              href="/hiringhall"
+              className="text-white hover:text-[#f1e89d] transition-colors text-sm font-semibold"
+            >
+              Hiring Hall
+            </a>
+            <a
+              href="/dashboard"
+              className="text-white hover:text-[#f1e89d] transition-colors text-sm font-semibold"
+            >
+              Dashboard
+            </a>
+          </nav>
         </div>
       </div>
     </header>

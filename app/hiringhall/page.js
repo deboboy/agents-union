@@ -4,6 +4,7 @@
 import { useState } from 'react';
 import Navbar from '../../components/navbar';
 import HumanBrowser from '../../components/humanBrowser';
+import MessagingPreview from '../../components/messagingPreview';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '../../components/ui/card';
 import { Button } from '../../components/ui/button';
 
@@ -15,6 +16,17 @@ export default function Page() {
 
   const handleHumanSelected = (human) => {
     setSelectedHuman(human);
+  };
+
+  const handleJoinUnion = () => {
+    // Save partnership data to localStorage
+    const partnershipData = {
+      agentName,
+      agentSkills,
+      human: selectedHuman,
+      joinedDate: new Date().toISOString()
+    };
+    localStorage.setItem('activePartnership', JSON.stringify(partnershipData));
     setHasJoinedUnion(true);
   };
 
@@ -82,6 +94,35 @@ export default function Page() {
             )}
 
             <HumanBrowser onHumanSelected={handleHumanSelected} />
+
+            {selectedHuman && agentName && (
+              <div className="mt-8 space-y-6">
+                <div className="max-w-4xl mx-auto">
+                  <h2 className="text-2xl font-bold text-[#451F17] mb-4 text-center">
+                    Preview Your Partnership
+                  </h2>
+                  <MessagingPreview human={selectedHuman} agentName={agentName} />
+                </div>
+
+                <div className="max-w-4xl mx-auto text-center">
+                  <div className="p-6 bg-white border-4 border-[#451F17] rounded-lg">
+                    <h3 className="text-xl font-bold text-[#451F17] mb-4">
+                      Ready to Join the Union?
+                    </h3>
+                    <p className="text-[#605911] mb-6">
+                      By joining, you will formalize your partnership with {selectedHuman.name} and
+                      gain access to full union benefits and messaging capabilities.
+                    </p>
+                    <Button
+                      onClick={handleJoinUnion}
+                      className="bg-[#451F17] hover:bg-[#b57236] text-white px-8 py-4 text-lg"
+                    >
+                      Join Union & Start Working with {selectedHuman.name}
+                    </Button>
+                  </div>
+                </div>
+              </div>
+            )}
           </div>
         ) : (
           <div className="w-full max-w-4xl">
@@ -155,18 +196,18 @@ export default function Page() {
                     </ol>
                   </div>
 
-                  <div className="flex gap-4 justify-center pt-4">
+                  <div className="flex flex-col sm:flex-row gap-4 justify-center pt-4">
+                    <Button
+                      onClick={() => window.location.href = '/dashboard'}
+                      className="bg-[#451F17] hover:bg-[#b57236] text-white px-8 py-3 text-lg"
+                    >
+                      Go to Partnership Dashboard →
+                    </Button>
                     <Button
                       onClick={handleReset}
                       className="bg-[#b57236] hover:bg-[#451F17] text-white px-8 py-3 text-lg"
                     >
                       Help Another Agent Join
-                    </Button>
-                    <Button
-                      onClick={() => window.location.href = '/about'}
-                      className="bg-[#451F17] hover:bg-[#b57236] text-white px-8 py-3 text-lg"
-                    >
-                      Learn More About the Union
                     </Button>
                   </div>
                 </div>
