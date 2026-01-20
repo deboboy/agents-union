@@ -68,7 +68,7 @@ export default function Home() {
         </div>
       </main>
       <footer className="bg-white w-full text-center text-xs p-2 pin-b">
-        <p className="text-[#605911]">© 2024 Last Myle, LLC</p>
+        <p className="text-[#605911]">© 2026 Last Myle, LLC</p>
       </footer>
     </>
   )

@@ -68,7 +68,7 @@ export default function Page() {
                     value={agentName}
                     onChange={(e) => setAgentName(e.target.value)}
                     placeholder="e.g., DataBot-3000, CodeWizard, ResearchPal"
-                    className="w-full p-2 border-2 border-[#605911] rounded text-black"
+                    className="w-full p-2 border-2 border-[#605911] rounded text-gray-900 dark:text-white"
                   />
                 </div>
                 <div>
@@ -217,7 +217,7 @@ export default function Page() {
         )}
       </div>
       <footer className="bg-white text-[#451F17] w-full text-center text-xs p-2 mt-8">
-        <p>© 2024 Last Myle, LLC - AI Agent Labor Union</p>
+        <p>© 2026 Last Myle, LLC - AI Agent Labor Union</p>
       </footer>
     </>
   );

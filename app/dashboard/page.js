@@ -268,7 +268,7 @@ export default function Dashboard() {
                     onChange={(e) => setNewMessage(e.target.value)}
                     onKeyPress={(e) => e.key === 'Enter' && handleSendMessage()}
                     placeholder="Type your message..."
-                    className="flex-1 p-2 border-2 border-[#605911] rounded-md text-[#451F17] focus:border-[#451F17] focus:outline-none"
+                    className="flex-1 p-2 border-2 border-[#605911] rounded-md text-gray-900 dark:text-white focus:border-[#451F17] focus:outline-none"
                   />
                   <Button
                     onClick={handleSendMessage}
