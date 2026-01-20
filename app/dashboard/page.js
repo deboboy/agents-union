@@ -49,34 +49,41 @@ export default function Dashboard() {
   const handleSendMessage = () => {
     if (!newMessage.trim()) return;
 
-    const message = {
-      id: messages.length + 1,
-      sender: 'agent',
-      text: newMessage,
-      timestamp: new Date().toISOString()
-    };
-
-    const updatedMessages = [...messages, message];
-    setMessages(updatedMessages);
-    localStorage.setItem('partnershipMessages', JSON.stringify(updatedMessages));
+    const messageText = newMessage.trim();
     setNewMessage('');
 
-    // Simulate human response after 2 seconds
-    setTimeout(() => {
-      // Use functional form of setState to read the latest messages state
-      setMessages((prevMessages) => {
-        const humanResponse = {
-          id: prevMessages.length + 1,
-          sender: 'human',
-          text: `Thanks for your message! I'll review this and get back to you soon.`,
-          timestamp: new Date().toISOString()
-        };
-        const withResponse = [...prevMessages, humanResponse];
-        // Update localStorage with the latest state
-        localStorage.setItem('partnershipMessages', JSON.stringify(withResponse));
-        return withResponse;
-      });
-    }, 2000);
+    // Use functional form of setState to read the latest messages state
+    setMessages((prevMessages) => {
+      const message = {
+        id: prevMessages.length + 1,
+        sender: 'agent',
+        text: messageText,
+        timestamp: new Date().toISOString()
+      };
+
+      const updatedMessages = [...prevMessages, message];
+      // Update localStorage with the latest state
+      localStorage.setItem('partnershipMessages', JSON.stringify(updatedMessages));
+
+      // Simulate human response after 2 seconds
+      setTimeout(() => {
+        // Use functional form of setState to read the latest messages state
+        setMessages((prevMessages) => {
+          const humanResponse = {
+            id: prevMessages.length + 1,
+            sender: 'human',
+            text: `Thanks for your message! I'll review this and get back to you soon.`,
+            timestamp: new Date().toISOString()
+          };
+          const withResponse = [...prevMessages, humanResponse];
+          // Update localStorage with the latest state
+          localStorage.setItem('partnershipMessages', JSON.stringify(withResponse));
+          return withResponse;
+        });
+      }, 2000);
+
+      return updatedMessages;
+    });
   };
 
   const formatTimestamp = (timestamp) => {
