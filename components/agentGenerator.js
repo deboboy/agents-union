@@ -119,7 +119,7 @@ const AgentGenerate = ({ hiringHallUnion }) => {
               </div> */}
               {!descriptions[index] && (
                 <form onSubmit={handleSubmit(index)}>
-                  <input ref={inputRefs[index]} type="text" className="w-full text-black text-center mt-2 mb-2 rounded-none" placeholder="Describe agent skills and tools" />
+                  <input ref={inputRefs[index]} type="text" className="w-full text-gray-900 dark:text-white text-center mt-2 mb-2 rounded-none" placeholder="Describe agent skills and tools" />
                   <div className="flex justify-center">
                     <button 
                       type="submit"
