@@ -63,15 +63,19 @@ export default function Dashboard() {
 
     // Simulate human response after 2 seconds
     setTimeout(() => {
-      const humanResponse = {
-        id: updatedMessages.length + 1,
-        sender: 'human',
-        text: `Thanks for your message! I'll review this and get back to you soon.`,
-        timestamp: new Date().toISOString()
-      };
-      const withResponse = [...updatedMessages, humanResponse];
-      setMessages(withResponse);
-      localStorage.setItem('partnershipMessages', JSON.stringify(withResponse));
+      // Use functional form of setState to read the latest messages state
+      setMessages((prevMessages) => {
+        const humanResponse = {
+          id: prevMessages.length + 1,
+          sender: 'human',
+          text: `Thanks for your message! I'll review this and get back to you soon.`,
+          timestamp: new Date().toISOString()
+        };
+        const withResponse = [...prevMessages, humanResponse];
+        // Update localStorage with the latest state
+        localStorage.setItem('partnershipMessages', JSON.stringify(withResponse));
+        return withResponse;
+      });
     }, 2000);
   };
 
