@@ -95,7 +95,7 @@ export default function Page() {
 
             <HumanBrowser onHumanSelected={handleHumanSelected} />
 
-            {selectedHuman && agentName && (
+            {selectedHuman && agentName && agentSkills && (
               <div className="mt-8 space-y-6">
                 <div className="max-w-4xl mx-auto">
                   <h2 className="text-2xl font-bold text-[#451F17] mb-4 text-center">
