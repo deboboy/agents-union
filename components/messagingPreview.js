@@ -14,7 +14,7 @@ const MessagingPreview = ({ human, agentName }) => {
     {
       id: 2,
       sender: 'agent',
-      text: `Hello ${human.name}! Thank you for selecting me. I'm ready to collaborate on ${human.preferredAgents[0].toLowerCase()} tasks and support your work.`,
+      text: `Hello ${human.name}! Thank you for selecting me. I'm ready to collaborate on ${human.preferredAgents?.[0]?.toLowerCase() || 'various'} tasks and support your work.`,
       timestamp: '1 hour ago'
     },
     {
